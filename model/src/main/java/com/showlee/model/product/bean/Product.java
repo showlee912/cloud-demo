@@ -1,4 +1,4 @@
-package com.showlee.product.bean;
+package com.showlee.model.product.bean;
 
 import lombok.Data;
 

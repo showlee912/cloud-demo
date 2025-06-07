@@ -1,4 +1,4 @@
-package com.showlee.config;
+package com.showlee.order.config;
 
 import feign.Logger;
 import feign.Retryer;

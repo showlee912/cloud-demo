@@ -1,8 +1,8 @@
-package com.showlee.service.impl;
+package com.showlee.product.service.impl;
 import java.math.BigDecimal;
 
 import com.showlee.product.bean.Product;
-import com.showlee.service.ProductService;
+import com.showlee.product.service.ProductService;
 import org.springframework.stereotype.Service;
 
 

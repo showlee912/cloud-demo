@@ -1,4 +1,4 @@
-package com.showlee.config;
+package com.showlee.product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

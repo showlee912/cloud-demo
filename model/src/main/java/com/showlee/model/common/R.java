@@ -1,4 +1,4 @@
-package com.showlee.common;
+package com.showlee.model.common;
 
 
 import lombok.Data;

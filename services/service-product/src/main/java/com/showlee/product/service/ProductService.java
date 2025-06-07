@@ -1,4 +1,4 @@
-package com.showlee.service;
+package com.showlee.product.service;
 
 
 import com.showlee.product.bean.Product;

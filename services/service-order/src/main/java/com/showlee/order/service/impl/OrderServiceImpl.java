@@ -1,13 +1,12 @@
-package com.showlee.service.impl;
+package com.showlee.order.service.impl;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 
 import com.showlee.order.bean.Order;
 import com.showlee.product.bean.Product;
-import com.showlee.service.OrderService;
+import com.showlee.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -33,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
     public Order createOrder(Long productId, Long userId) {
 
         //根据productId远程调用商品服务，获取商品信息
-        Product product = getProductFromRemote(productId);
+        Product product = getProductFromRemoteByIdWithLB(productId);
         Order order = new Order();
         order.setId(1L);
         order.setUserId(userId);
@@ -61,5 +60,14 @@ public class OrderServiceImpl implements OrderService {
         System.out.println("远程调用的url:" + url);
         //发送http请求
         return restTemplate.getForObject(url, Product.class);
+    }
+
+
+    // 基于注解的负载均衡实现获取商品信息
+    private Product getProductFromRemoteByIdWithLB(Long productId){
+        //service-product 会被动态替换
+        String url = "http://service-product/product/"+productId;
+        Product product = restTemplate.getForObject(url, Product.class);
+        return product;
     }
 }
