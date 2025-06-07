@@ -1,7 +1,7 @@
 package com.showlee.product.controller;
 
 
-import com.showlee.product.bean.Product;
+import com.showlee.model.product.bean.Product;
 import com.showlee.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 //@RequestMapping("/api/product")
 @RestController
 public class ProductController {
-
-
 
     @Autowired
     ProductService productService;

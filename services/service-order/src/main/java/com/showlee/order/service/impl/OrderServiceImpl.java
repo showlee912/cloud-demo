@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.util.List;
 
 
-import com.showlee.order.bean.Order;
-import com.showlee.product.bean.Product;
+import com.showlee.model.order.bean.Order;
+import com.showlee.model.product.bean.Product;
 import com.showlee.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

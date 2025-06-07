@@ -1,7 +1,7 @@
 package com.showlee.order.controller;
 
 
-import com.showlee.order.bean.Order;
+import com.showlee.model.order.bean.Order;
 import com.showlee.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
