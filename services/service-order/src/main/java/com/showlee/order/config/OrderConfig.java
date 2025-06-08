@@ -10,11 +10,11 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class OrderConfig {
 
-    //开启超时重试
-    @Bean
-    Retryer retryer() {
-        return new Retryer.Default();
-    }
+//    //开启超时重试
+//    @Bean
+//    Retryer retryer() {
+//        return new Retryer.Default();
+//    }
 
     //开启Openfeign的日志
     @Bean

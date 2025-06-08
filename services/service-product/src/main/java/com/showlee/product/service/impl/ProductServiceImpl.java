@@ -19,7 +19,7 @@ public class ProductServiceImpl implements ProductService {
         product.setNum(10);
 
         try {
-            TimeUnit.SECONDS.sleep(6);//休眠，超时测试
+            TimeUnit.SECONDS.sleep(30);//休眠，超时测试
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
