@@ -17,10 +17,13 @@ public class OrderConfig {
         return new Retryer.Default();
     }
 
+
+    //开启Openfeign的日志
     @Bean
     Logger.Level feignLoggerLevel() {
         return Logger.Level.FULL;
     }
+
 
     @LoadBalanced //注解式负载均衡
     @Bean
