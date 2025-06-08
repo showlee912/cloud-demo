@@ -31,6 +31,4 @@ public class OrderController {
     public Object testApifox(@RequestParam("nickname") String nickname,@RequestParam("age") String age){
         return apifoxFeignClient.getResponse(nickname,age);
     }
-
-
 }

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: service-order
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connectTimeout: 1000
+            readTimeout: 1000
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+server:
+  port: 8000
+
+logging:
+  level:
+    com.showlee.order.feign: DEBUG
