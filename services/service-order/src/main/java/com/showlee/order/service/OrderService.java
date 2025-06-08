@@ -6,5 +6,4 @@ import com.showlee.model.product.bean.Product;
 public interface OrderService {
     Order createOrder(Long productId, Long userId);
 
-    Product getProductFromRemote(Long productId);
 }
