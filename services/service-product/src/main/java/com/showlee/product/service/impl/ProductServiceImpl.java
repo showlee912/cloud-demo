@@ -18,11 +18,11 @@ public class ProductServiceImpl implements ProductService {
         product.setProductName("热干面");
         product.setNum(10);
 
-        try {
-            TimeUnit.SECONDS.sleep(30);//休眠，超时测试
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(30);//休眠，超时测试
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
 
 
         return product;

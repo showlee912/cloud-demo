@@ -1,6 +1,7 @@
 package com.showlee.order.controller;
 
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.showlee.model.order.bean.Order;
 import com.showlee.order.feign.ApifoxFeignClient;
 import com.showlee.order.service.OrderService;
@@ -19,6 +20,7 @@ public class OrderController {
     ApifoxFeignClient apifoxFeignClient;
 
     //创建订单
+    @SentinelResource(value = "createOrder")
     @GetMapping("/create")
     public Order createOrder(@RequestParam("userId") Long userId,
                              @RequestParam("productId") Long productId){
